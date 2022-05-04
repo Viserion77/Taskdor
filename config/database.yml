@@ -83,4 +83,4 @@ production:
   <<: *default
   database: taskdor_production
   username: taskdor
-  password: <%= ENV["taskdor_DATABASE_PASSWORD"] %>
+  password: <%= ENV["TASKDOR_DATABASE_PASSWORD"] %>
