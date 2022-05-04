@@ -8,3 +8,9 @@
 
   <%= button_to "Destroy this user", @user, method: :delete %>
 </div>
+
+<div id="tasks">
+  <% render @user.tasks %>
+</div>
+
+<%= link_to "New task", new_user_task_path(@user) %>
