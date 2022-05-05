@@ -11,3 +11,9 @@ Click the button below to start a new development environment:
 ```bash
 $ docker-compose build && docker-compose up
 ```
+
+# Build css
+
+    ```bash
+    $ rails tailwindcss:build
+    ```

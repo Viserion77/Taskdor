@@ -1,0 +1,18 @@
+<li id="<%= "#{dom_id(task)}_item" %>" class="py-3">
+  <%= turbo_frame_tag dom_id(task) do %>
+    <div class="flex items-center justify-between">
+      <p><%= link_to task.title, edit_task_path(task), class: "flex-1 #{"line-through opacity-50" if task.done?}" %></p>
+
+      <div>
+        <% if task.pending? %>
+          <%= button_to "Mark complete", task_path(task, task: { status: 'done'}), method: :patch, class: "bg-green-50" %>
+        <% else %>
+          <%= button_to "Mark incomplete", task_path(task, task: { status: 'pending'}), method: :patch, class: "bg-black-50" %>
+        <% end %>
+      </div>
+
+      <%= button_to "Delete", task_path(task), method: :delete, class: "bg-red-50" %>
+    </div>
+    <small><%= task.description %></small>
+  <% end %>
+</li>
