@@ -14,6 +14,6 @@ $ docker-compose build && docker-compose up
 
 # Build css
 
-    ```bash
-    $ rails tailwindcss:build
-    ```
+```bash
+$ rails tailwindcss:build
+```
